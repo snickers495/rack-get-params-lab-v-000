@@ -9,7 +9,7 @@ class Application
 
     if req.path.match(/cart/)
       if !@@cart.empty?
-        @@items.each do |item|
+        @@cart.each do |item|
           resp.write "#{item}\n"
         end
       else
